@@ -128,3 +128,16 @@ var {name:foo,
 
 console.log(foo); //'Andres'
 console.log(bar); //'Canada'
+
+/**================================================ **/
+// Rest in Object Destructuring
+// The rest syntax can also be used to pick up property keys that are not already picked up by the destructuring pattern.
+// Those keys and their values are copied onto a new object.
+
+var person = {name:'Andres', country:'Canada', job:'Developer', friends: ['Byron', 'Mario']};
+var {name, friends, ...others} = person;
+
+console.log(name); //'Andres'
+console.log(friends); // ['Byron','Mario']
+console.log(others); // {country:'Canada', job:'Developer'}
+console.log(others.country); // 'Canada'
