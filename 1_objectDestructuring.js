@@ -141,3 +141,28 @@ console.log(name); //'Andres'
 console.log(friends); // ['Byron','Mario']
 console.log(others); // {country:'Canada', job:'Developer'}
 console.log(others.country); // 'Canada'
+
+/**================================================ **/
+// Object Destructuring and Functions
+// Object destructuring can beused to assign parameters to functions.
+
+function persons({name:x, job:y} = {}){
+    console.log(x);
+}
+
+persons({name:'Joel'}); //'Joel'
+persons(); // undefined
+//persons(location); // Error: location is not defined
+console.log("=====================================");
+
+// Notice the {} on the right hand side of the parameters object. It makes it possible for us to call a function without
+// passing arguments. That is why we got undefined.
+// If we remove it, we'll get an error message.
+
+// We can also assign default values to the parameters
+
+function personas({name:x="AndresJ", job:y="Developer"} = {}) {
+    console.log(x);
+}
+
+personas({name}) //'AndresJ'
