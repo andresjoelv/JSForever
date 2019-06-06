@@ -81,3 +81,16 @@ console.log(job); //"Developer"
  console.log(foo); //'Andres'
  console.log(bar); //'Byron'
 
+ // So name was extracted from person and assigned to a different variable. 
+ // friend on the other hand was undefined in person, so the new variable bar was assigned the default value.
+
+/**================================================ **/
+// Computed Property Name
+// Computed property name is another object literal feature that also works for destructuring.
+// You can specify the name of a property via an expression, if you put it in square brackets
+
+var prop = "name";
+
+var { [prop] : foo="ComputedPropertyName"} = {name:'Andres', country:'Canada', job:'Developer'};
+
+console.log(foo); //'Andres'
