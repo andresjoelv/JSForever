@@ -56,3 +56,28 @@ console.log(job); //"Developer"
  console.log(foo); //'Andres'
  console.log(bar); //'Developer
 
+ /**================================================ **/
+ // Using Default Values
+ // Default values can also be used in object destructuring, just in case a variable in undefined
+ // in an object it wants to extract data from.
+
+ var person = {name:'Andres', country:'Canada', job:'Developer'};
+
+ var {name="myName", friend='Byron'} = person;
+
+ console.log(name); //'Andres'
+ console.log(friend); //'Byron'
+
+ // So if the value is not undefined, the variable stores the value
+ // extracted from the object as in the case of name. Else, it used the
+ // default value as it did for friend.
+
+ // We can also set the default values when we assigning values to a new variable
+
+ var person = {name:'Andres', country:'Canada', job:'Developer'};
+
+ var {name:foo='myName', friend:bar='Byron'} = person;
+
+ console.log(foo); //'Andres'
+ console.log(bar); //'Byron'
+
