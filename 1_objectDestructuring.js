@@ -105,3 +105,26 @@ var {name:foo, friends:bar} = person;
 
 console.log(foo); //'Andres'
 console.log(bar); // ['Byron','Mario']
+
+/**================================================ **/
+// Nesting in Object Destructuring
+// Objects can also be nested when destructuring
+
+var person = {
+    name: 'Andres',
+    place: {
+        country: 'Canada',
+        city: 'Toronto',
+    },
+    friends: ['Byron','Mario']
+};
+
+var {name:foo,
+     place: {
+         country: bar,
+         city: x,
+     }
+} = person;
+
+console.log(foo); //'Andres'
+console.log(bar); //'Canada'
