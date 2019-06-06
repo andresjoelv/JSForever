@@ -94,3 +94,14 @@ var prop = "name";
 var { [prop] : foo="ComputedPropertyName"} = {name:'Andres', country:'Canada', job:'Developer'};
 
 console.log(foo); //'Andres'
+
+/**================================================ **/
+// Combining Arrays with Objects
+// Arrays can also be used with objects in object destructuring.
+
+var person = {name:'Andres', country:'Canada', friends: ['Byron', 'Mario']};
+
+var {name:foo, friends:bar} = person;
+
+console.log(foo); //'Andres'
+console.log(bar); // ['Byron','Mario']
