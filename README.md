@@ -1,1 +1,1 @@
-# javascriptforever
+# JavaScriptForever
