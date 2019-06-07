@@ -43,3 +43,21 @@ elements.map( ({length:lenghFooBarX}) => lenghFooBarX); // [8,6,7,9]
 var test2 = elements.map( ({length}) => length); // [8,6,7,9]
 console.log(test2);
 
+//===================================================
+
+// Normal function
+const x = function(arg1, arg2) { /* Do something */ };
+
+// Arrow function
+const y = (arg1, arg2) => { /* Do something */ };
+
+// Normal function in a callback
+button.addEventListener('click', function(){
+    //...
+});
+
+// Arrow function in a callback
+button.addEventListener('click', () => {
+    //...
+});
+
